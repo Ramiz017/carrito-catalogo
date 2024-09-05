@@ -1,0 +1,17 @@
+/* Estilo para el filtro de categoría */
+.category-filter {
+    margin-top: 10px;
+}
+
+.category-filter h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.category-filter select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 190px;
+    font-size: 15px;
+}

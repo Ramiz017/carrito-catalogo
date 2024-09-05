@@ -1,0 +1,32 @@
+/* Estilos para el filtro de nombre */
+.name-filter {
+    padding: 10px;
+    border: 1px solid #ddd; /* Borde ligero para el contenedor del filtro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro para el contenedor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para un efecto de elevación */
+}
+
+.name-filter h2 {
+    font-size: 18px;
+    margin-bottom: 10px; /* Espacio debajo del título */
+    color: #333; /* Color del texto */
+}
+
+.name-filter .filter-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc; /* Borde del campo de texto */
+    border-radius: 4px; /* Bordes redondeados del campo de texto */
+    font-size: 16px; /* Tamaño del texto en el campo de texto */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+.name-filter .filter-input::placeholder {
+    color: #aaa; /* Color del texto del placeholder */
+}
+
+.name-filter .filter-input:focus {
+    border-color: #007bff; /* Color del borde al enfocar */
+    outline: none; /* Quita el contorno predeterminado */
+}

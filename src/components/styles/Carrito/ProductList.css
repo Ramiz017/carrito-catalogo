@@ -1,0 +1,35 @@
+/* Estilos para los filtros y botones de visibilidad */
+.filters-container {
+    margin-bottom: 20px;
+}
+
+.filter-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    width: 200px;
+    text-align: center;
+    height: auto;
+}
+
+.filter-toggle:hover {
+    background-color: #0056b3;
+}
+
+.filter-toggle:focus {
+    outline: none;
+}
+
+.filter-toggle.active {
+    background-color: rgb(109, 78, 248); /* Color para el botón activado */
+}
+
+.filter-toggle.inactive {
+    background-color: rgb(250, 78, 78); /* Color para el botón desactivado */
+}

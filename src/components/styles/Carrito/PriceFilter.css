@@ -1,0 +1,46 @@
+/* Estilos para el contenedor de la línea del slider */
+.horizontal-slider {
+    width: 190px; /* Ancho completo para ocupar todo el espacio disponible */
+    height: 8px; /* Altura de la línea del slider */
+    margin-top: 20px; /* Margen superior para separar del resto del contenido */
+    background: #ddd; /* Color de fondo de la línea cuando no está seleccionada */
+    border-radius: 5px; /* Bordes redondeados para un diseño más suave */
+    position: relative; /* Posicionamiento relativo para manejar elementos internos como el thumb */
+}
+
+/* Estilos para la parte seleccionada de la línea del slider */
+.slider-track {
+    background: linear-gradient(90deg, #4CAF50, #8BC34A); /* Gradiente de color para la parte de la línea seleccionada */
+    height: 100%; /* Altura completa de la línea */
+    border-radius: 5px; /* Bordes redondeados para la parte seleccionada también */
+}
+
+/* Estilos para el "thumb" o indicador del slider que el usuario arrastra */
+.slider-thumb {
+    top: -5px;
+    height: 20px; /* Tamaño del thumb */
+    width: 20px; /* Ancho del thumb */
+    background-color: #4CAF50; /* Color del thumb cuando está en estado normal */
+    border-radius: 50%; /* Forma circular */
+    cursor: grab; /* Cambia el cursor a "mano cerrada" para indicar que se puede arrastrar */
+    display: flex; /* Uso de flexbox para centrar contenido si hubiera */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    color: #fff; /* Color del texto dentro del thumb, si hay */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra alrededor del thumb para darle profundidad */
+    transition: transform 0.2s ease; /* Transición suave cuando se aplica hover */
+}
+
+/* Estilo para el thumb al pasar el ratón (hover) */
+.slider-thumb:hover {
+    transform: scale(1.2); /* Agranda el thumb cuando el usuario pasa el ratón para indicar interactividad */
+}
+
+/* Estilos para los valores del rango de precios */
+.price-range-values {
+    display: flex; /* Flexbox para distribuir los valores a los extremos */
+    justify-content: space-between; /* Espacio entre los dos valores (mínimo y máximo) */
+    margin-top: 10px; /* Margen superior para separarlos del slider */
+    font-weight: bold; /* Negrita para que sean más visibles */
+    color: #333; /* Color del texto de los valores */
+}
