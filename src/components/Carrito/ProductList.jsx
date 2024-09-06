@@ -18,9 +18,7 @@ export const ProductList = ({
     const [isPriceFilterVisible, setIsPriceFilterVisible] = useState(false);
     const [isNameFilterVisible, setIsNameFilterVisible] = useState(false);
     const [isCategoryFilterVisible, setIsCategoryFilterVisible] = useState(false);
-
-    // Estados para los filtros
-    const [priceRange, setPriceRange] = useState([0, Infinity]); // Asegúrate de que cubra todos los posibles precios
+    const [priceRange, setPriceRange] = useState([0, Infinity]);
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("");
 
@@ -33,17 +31,15 @@ export const ProductList = ({
     }, []);
 
     useEffect(() => {
-        // Inicializa filteredProducts con todos los productos
         setFilteredProducts(products);
     }, [products]);
-    
+
     useEffect(() => {
-        // Solo aplica el filtro si hay filtros activos
         if (products.length > 0) {
             let filtered = [...products];
-            
+
             if (selectedCategory) {
-                filtered = filtered.filter(product => 
+                filtered = filtered.filter(product =>
                     product.id_category === parseInt(selectedCategory, 10)
                 );
             }
@@ -60,15 +56,15 @@ export const ProductList = ({
             setFilteredProducts(filtered);
         }
     }, [searchTerm, priceRange, selectedCategory, products]);
-    
+
     const fetchProducts = async () => {
         try {
             const response = await fetch("https://aguamarina-api-mysql.onrender.com/api/products", {
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                }
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
             );
             if (!response.ok) throw new Error("Network response was not ok");
             const data = await response.json();
@@ -136,7 +132,6 @@ export const ProductList = ({
                         setPriceRange={setPriceRange}
                     />
                 )}
-
                 <button
                     className={`filter-toggle ${isNameFilterVisible ? 'active' : 'inactive'}`}
                     onClick={() => setIsNameFilterVisible(!isNameFilterVisible)}
@@ -150,7 +145,6 @@ export const ProductList = ({
                         setSearchTerm={setSearchTerm}
                     />
                 )}
-
                 <button
                     className={`filter-toggle ${isCategoryFilterVisible ? 'active' : 'inactive'}`}
                     onClick={() => setIsCategoryFilterVisible(!isCategoryFilterVisible)}
